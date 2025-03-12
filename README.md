@@ -15,7 +15,7 @@ Después seguimos con la configuración del "persistence.xml" donde tendremos qu
 4. para seleccionar en el lado derecho una "Persistence Unit"
 5. Vamos a ponerle un nombre preferiblemente que sea "parcialdbPU" 
 6. en la parte de Database Connection seleccionamos la base de datos que ya previamente configuramos.
-7. luego en ese mismo archivo "persistence.xml" nos vamos a la pestaña de "source" donde nos aparecera esta linea de codigo "<!-- <property name="jakarta.persistence.schema-generation.database.action" value="create"/> -->" la cual vamos a remplazar por "<!-- <property name="javax.persistence.schema-generation.database.action" value="create"/> -->"(este paso es muy importante para que funcione correctamente);
+7. luego en ese mismo archivo "persistence.xml" nos vamos a la pestaña de "source" donde nos aparecera esta linea de codigo "(Si no te aparece la línea de código entra al archivo y visualízalo en código)<!-- <property name="jakarta.persistence.schema-generation.database.action" value="create"/> -->" la cual vamos a remplazar por "(Si no te aparece la línea de código entra al archivo y visualízalo en código)<!-- <property name="javax.persistence.schema-generation.database.action" value="create"/> -->"(este paso es muy importante para que funcione correctamente);
 
 Ya para finalizar nos vamos a "/Source Packages/persistende/reservationModelJpaController" y pegamos el nombre que le dimos a nuestra Persistence Unit en la parte de la línea 38 que encontraremos este código "emf=Persistence.createEntityManagerFactory("parcialdbPU");" y lo que está en comillas dobles es donde podremos el nombre de nuestra PU.
 
